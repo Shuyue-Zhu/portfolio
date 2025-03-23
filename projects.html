@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #ffffff;
+      background-color: #f6f9fc;
       color: #2c3e50;
       margin: 0;
       padding: 0;
@@ -38,7 +38,7 @@
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1080px;
       margin: 100px auto 40px;
       padding: 0 20px;
     }
@@ -47,27 +47,51 @@
       font-size: 32px;
       color: #1f4e99;
       margin-bottom: 30px;
+      text-align: center;
     }
 
-    h3 {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
       color: #2980b9;
-      margin-top: 30px;
-      font-size: 20px;
     }
 
-    ul {
+    .card ul {
       padding-left: 20px;
     }
 
-    li {
-      margin-bottom: 8px;
+    .card li {
+      margin-bottom: 6px;
+    }
+
+    .emoji {
+      font-size: 20px;
+      margin-right: 6px;
     }
 
     footer {
       text-align: center;
       font-size: 12px;
       color: #aaa;
-      margin-top: 40px;
+      margin-top: 60px;
       padding: 20px 0;
       border-top: 1px solid #eee;
     }
@@ -84,50 +108,65 @@
 
   <div class="container">
     <h1>Projects</h1>
+    <div class="grid">
+      <div class="card">
+        <h3><span class="emoji">🧠</span> Big Five Personality Assessment</h3>
+        <ul>
+          <li><strong>Description:</strong> NLP tool using OpenAI & DeepSeek to infer personality from text.</li>
+          <li><strong>Role:</strong> Backend & API integration lead.</li>
+          <li><strong>Tech:</strong> Python, TensorFlow, OCR, OpenAI</li>
+        </ul>
+      </div>
 
-    <h3>1. Big Five Personality Assessment Application</h3>
-    <ul>
-      <li><strong>Description:</strong> Developed an NLP-based tool integrating OpenAI and DeepSeek APIs to assess personality traits from text inputs.</li>
-      <li><strong>Role:</strong> Led backend development, API integration, and iterative evaluation.</li>
-      <li><strong>Tech:</strong> Python, TensorFlow, Florence-2 OCR, OpenAI API</li>
-    </ul>
+      <div class="card">
+        <h3><span class="emoji">🏠</span> Real Estate Price Prediction</h3>
+        <ul>
+          <li><strong>Description:</strong> Regression model to predict property prices.</li>
+          <li><strong>Tech:</strong> R, SQL, Tableau</li>
+        </ul>
+      </div>
 
-    <h3>2. Real Estate Price Prediction</h3>
-    <ul>
-      <li><strong>Description:</strong> Built a multiple regression model to identify factors influencing property prices and make predictions.</li>
-      <li><strong>Tech:</strong> R, SQL, Tableau</li>
-    </ul>
+      <div class="card">
+        <h3><span class="emoji">📉</span> Bank Customer Churn Analysis</h3>
+        <ul>
+          <li><strong>Description:</strong> Dashboard analysis on customer churn factors.</li>
+          <li><strong>Tech:</strong> Python, Tableau</li>
+        </ul>
+      </div>
 
-    <h3>3. Bank Customer Churn Analysis</h3>
-    <ul>
-      <li><strong>Description:</strong> Built dashboards to analyze credit scores, balances, and product usage on churn rates.</li>
-      <li><strong>Tech:</strong> Python, Tableau</li>
-    </ul>
+      <div class="card">
+        <h3><span class="emoji">📈</span> Stock Trend Forecasting</h3>
+        <ul>
+          <li><strong>Description:</strong> Time series analysis for stock prediction.</li>
+          <li><strong>Tech:</strong> R</li>
+        </ul>
+      </div>
 
-    <h3>4. Stock Trend Forecasting</h3>
-    <ul>
-      <li><strong>Description:</strong> Applied time series analysis to detect market patterns and forecast stock prices.</li>
-      <li><strong>Tech:</strong> R</li>
-    </ul>
+      <div class="card">
+        <h3><span class="emoji">🏥</span> Hospital Clustering & PCA</h3>
+        <ul>
+          <li><strong>Description:</strong> Identified patient groups through clustering and PCA.</li>
+          <li><strong>Tech:</strong> Python, R</li>
+        </ul>
+      </div>
 
-    <h3>5. Hospital Data Clustering & Analysis</h3>
-    <ul>
-      <li><strong>Description:</strong> Performed hierarchical clustering and PCA on hospital data to identify patient subgroups and visualize trends.</li>
-      <li><strong>Tech:</strong> R, Python</li>
-    </ul>
+      <div class="card">
+        <h3><span class="emoji">🧬</span> Recombinant Spidroins Research</h3>
+        <ul>
+          <li><strong>Description:</strong> Evaluated elasticity & biocompatibility for biomaterial use.</li>
+          <li><strong>Outcome:</strong> Applications in sutures & 3D bioprinting.</li>
+        </ul>
+      </div>
 
-    <h3>6. Genetically Engineered Recombinant Spidroins</h3>
-    <ul>
-      <li><strong>Description:</strong> Researched β-sheet formation, elasticity, and biocompatibility of recombinant spidroins for use in biomaterials.</li>
-      <li><strong>Outcomes:</strong> Evaluated applications in surgical sutures and 3D bioprinting.</li>
-    </ul>
-
-    <h3>7. Agricultural Innovation Project – Jiangsu Academy</h3>
-    <ul>
-      <li><strong>Role:</strong> Project Manager (2020–2022)</li>
-      <li><strong>Description:</strong> Led site visits, optimized supply chains, and proposed vertical garden solutions.</li>
-      <li><strong>Outcomes:</strong> Increased projected revenue 15–20%, won provincial soft science award.</li>
-    </ul>
+      <div class="card">
+        <h3><span class="emoji">🌱</span> Agricultural Innovation (Jiangsu)</h3>
+        <ul>
+          <li><strong>Role:</strong> Project Manager</li>
+          <li><strong>Description:</strong> Field research & supply chain optimization.</li>
+          <li><strong>Outcome:</strong> 15–20% revenue boost; award-winning study.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <footer>
