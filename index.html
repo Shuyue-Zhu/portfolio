@@ -6,31 +6,64 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #ffffff;
       color: #2c3e50;
-      padding: 40px;
-      max-width: 960px;
-      margin: auto;
+      margin: 0;
+      padding: 0;
       line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1f4e99;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 80px auto 40px;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
     }
 
     h1 {
-      color: #2c3e50;
       font-size: 36px;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
+      color: #1f4e99;
     }
 
     h2 {
-      color: #34495e;
       font-size: 28px;
-      margin-top: 50px;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     h3 {
-      font-size: 20px;
       color: #2980b9;
       margin-top: 30px;
+      font-size: 20px;
     }
 
     ul {
@@ -53,107 +86,71 @@
 
     footer {
       text-align: center;
-      margin-top: 60px;
       font-size: 12px;
       color: #aaa;
+      margin-top: 40px;
+      padding: 20px 0;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <h1>Hello! I'm Shuyue Zhu</h1>
-  <p>I'm a graduate student in Informatics with a concentration in Analytics at Northeastern University. I'm passionate about AI, NLP, and data-driven solutions that improve real-world outcomes.</p>
+  <div class="container">
+    <section id="home">
+      <h1>Hello! I'm Shuyue Zhu</h1>
+      <p>I'm a graduate student in Informatics with a concentration in Analytics at Northeastern University. I'm passionate about AI, NLP, and data-driven solutions that improve real-world outcomes.</p>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
+    <section id="projects">
+      <h2>Projects</h2>
+      <!-- 7 projects go here -->
+      <!-- Placeholder, will be added fully next step -->
+    </section>
 
-    <h3>1. Big Five Personality Assessment Application</h3>
-    <ul>
-      <li><strong>Description:</strong> Developed a personality assessment tool integrating OpenAI and DeepSeek APIs, using NLP to identify user personality traits based on text input.</li>
-      <li><strong>Role:</strong> Led backend development, model implementation, testing, and performance evaluation.</li>
-      <li><strong>Technologies:</strong> Python, TensorFlow, OpenAI API, DeepSeek API, Florence-2 OCR</li>
-      <li><strong>Outcomes:</strong> Improved prediction accuracy and consistency. Designed test plans, optimized API usage, and ensured frontend integration.</li>
-    </ul>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">R</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Microsoft Office</span>
+        <span class="tag">Logistic Regression</span>
+        <span class="tag">Clustering</span>
+        <span class="tag">NLP</span>
+        <span class="tag">Time Series</span>
+        <span class="tag">Multivariate Analysis</span>
+        <span class="tag">Data Visualization</span>
+        <span class="tag">Database Management</span>
+      </div>
+    </section>
 
-    <h3>2. Real Estate Price Prediction</h3>
-    <ul>
-      <li><strong>Description:</strong> Built a multiple regression model to identify factors influencing property prices and make predictions.</li>
-      <li><strong>Technologies:</strong> R, SQL, Tableau</li>
-      <li><strong>Outcomes:</strong> Generated actionable insights for the real estate market.</li>
-    </ul>
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li>2025 – M.S. Informatics (Analytics), Northeastern University, Boston</li>
+        <li>2023 – M.S. Biomedical Engineering, City University of Hong Kong</li>
+        <li>2019 – B.S. Biotechnology, Beijing Forestry University</li>
+      </ul>
+    </section>
 
-    <h3>3. Bank Customer Churn Analysis</h3>
-    <ul>
-      <li><strong>Description:</strong> Built dashboards to analyze credit scores, balances, and product usage on churn rates.</li>
-      <li><strong>Technologies:</strong> Python, Tableau</li>
-      <li><strong>Outcomes:</strong> Supported retention strategies through data visualization and pattern recognition.</li>
-    </ul>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:crystal46133@gmail.com">crystal46133@gmail.com</a><br>
+         LinkedIn: <a href="https://linkedin.com/in/shuyue-zhu-569bba290" target="_blank">linkedin.com/in/shuyue-zhu-569bba290</a></p>
+    </section>
 
-    <h3>4. Stock Trend Forecasting</h3>
-    <ul>
-      <li><strong>Description:</strong> Applied time series analysis to detect market patterns and forecast stock prices.</li>
-      <li><strong>Technologies:</strong> R</li>
-    </ul>
-
-    <h3>5. Hospital Data Clustering & Analysis</h3>
-    <ul>
-      <li><strong>Description:</strong> Performed hierarchical clustering and PCA on hospital data to identify patient subgroups and visualize trends.</li>
-      <li><strong>Technologies:</strong> R, Python</li>
-      <li><strong>Outcomes:</strong> Enhanced data-driven healthcare decision-making.</li>
-    </ul>
-
-    <h3>6. Genetically Engineered Recombinant Spidroins as Biomaterials</h3>
-    <ul>
-      <li><strong>Description:</strong> Researched β-sheet formation, elasticity, and biocompatibility of recombinant spidroins.</li>
-      <li><strong>Technologies:</strong> Biomedical research, literature review</li>
-      <li><strong>Outcomes:</strong> Evaluated use in surgical sutures and 3D bioprinting applications.</li>
-    </ul>
-
-    <h3>7. Agricultural Innovation Project – Jiangsu Academy</h3>
-    <ul>
-      <li><strong>Role:</strong> Project Manager (2020–2022)</li>
-      <li><strong>Description:</strong> Led site visits to factories, optimized supply chains, designed park layouts, and proposed vertical gardening solutions.</li>
-      <li><strong>Outcomes:</strong> Achieved 15–20% projected revenue growth and won provincial soft science project award.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <div>
-      <span class="tag">Python</span>
-      <span class="tag">R</span>
-      <span class="tag">SQL</span>
-      <span class="tag">Tableau</span>
-      <span class="tag">Microsoft Office Suite</span>
-      <span class="tag">Logistic Regression</span>
-      <span class="tag">K-Means</span>
-      <span class="tag">NLP</span>
-      <span class="tag">Time Series Forecasting</span>
-      <span class="tag">Multivariate Analysis</span>
-      <span class="tag">Data Visualization</span>
-      <span class="tag">Database Management</span>
-      <span class="tag">English</span>
-      <span class="tag">Chinese</span>
-      <span class="tag">German (Beginner)</span>
-    </div>
-  </section>
-
-  <section>
-    <h2>Education</h2>
-    <p><strong>2025</strong> – M.S. Informatics (Analytics), Northeastern University, Boston, MA</p>
-    <p><strong>2023</strong> – M.S. Biomedical Engineering, City University of Hong Kong</p>
-    <p><strong>2019</strong> – B.S. Biotechnology, Beijing Forestry University, China</p>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:crystal46133@gmail.com">crystal46133@gmail.com</a><br>
-       LinkedIn: <a href="https://linkedin.com/in/shuyue-zhu-569bba290" target="_blank">linkedin.com/in/shuyue-zhu-569bba290</a>
-    </p>
-  </section>
-
-  <footer>
-    © 2025 Shuyue Zhu • Portfolio Website
-  </footer>
+    <footer>
+      © 2025 Shuyue Zhu • Portfolio Website
+    </footer>
+  </div>
 </body>
 </html>
