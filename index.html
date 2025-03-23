@@ -79,27 +79,23 @@
       font-size: 14px;
     }
 
-    .grid-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .link-card {
+    .explore-button {
+      display: inline-block;
       background: #1f4e99;
       color: white;
-      padding: 30px;
-      border-radius: 10px;
-      text-align: center;
+      padding: 18px 30px;
+      border-radius: 12px;
       text-decoration: none;
       font-size: 18px;
       font-weight: bold;
-      transition: 0.3s ease;
+      margin-top: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .link-card:hover {
+    .explore-button:hover {
       background: #163b74;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
 
     footer {
@@ -127,12 +123,7 @@
       <p>I’m a graduate student in Informatics with a concentration in Analytics at Northeastern University. My academic and professional journey spans biomedical engineering, biotechnology, and data analytics, allowing me to bridge healthcare and technology. I’m passionate about leveraging AI, NLP, and data-driven methods to solve real-world problems.</p>
       <p>Over the years, I’ve led and contributed to multiple cross-disciplinary projects—from personality prediction using language models, to price forecasting with regression models, and even publishing award-winning research in agricultural innovation. My mission is to build human-centered, insight-driven solutions that deliver real value.</p>
 
-      <div class="grid-links">
-        <a href="projects.html" class="link-card">Explore My Projects</a>
-        <a href="#skills" class="link-card">See My Skills</a>
-        <a href="#education" class="link-card">View Education</a>
-        <a href="#contact" class="link-card">Contact Me</a>
-      </div>
+      <a href="projects.html" class="explore-button">Explore My Projects</a>
     </section>
 
     <section id="skills">
